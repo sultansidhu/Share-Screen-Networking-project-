@@ -276,12 +276,12 @@ def ScreenGrab():
 	
 	#grab screen shot
 	im = ImageGrab.grab()
-	im.save(r"ShareScreen_ByRoyKuper.jpg" , quality = 50 ,dpi = (400,400))
+	im.save(r"temp.jpg" , quality = 50 ,dpi = (400,400))
 	
-	size = os.path.getsize(r"ShareScreen_ByRoyKuper.jpg")/1000		#retrun size KB
+	size = os.path.getsize(r"temp.jpg")/1000		#retrun size KB
 	
 	#get the data from the file
-	with open (r"ShareScreen_ByRoyKuper.jpg","rb") as image_pointer:
+	with open (r"temp.jpg","rb") as image_pointer:
 		returnImage = image_pointer.read()
 		
 
