@@ -347,7 +347,7 @@ def TCP_get():
 pygame.init()								#initialize parameters in pygame module
 
 #first window, getting input , and close window
-SetUpWindow = Window((500,300),0,32,"Sharing Screens - by Roy Kuper",350,200,"")
+SetUpWindow = Window((500,300),0,32,"Sharing Screens",350,200,"")
 name = SetUpWindow.FirstWindow()
 
 #the window that appear when the client finish type his name.
