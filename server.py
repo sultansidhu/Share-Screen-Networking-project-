@@ -295,7 +295,7 @@ def window_setup():
 	Exit Statement: the function set up the window gui of the server, the function returns DisplaySurf
 	'''
 	DISPLAY = pygame.display.set_mode((WIDTH,HEIGHT),0,32)							#creates the window
-	pygame.display.set_caption("Sharing Screens - by Roy Kuper")					#Set title
+	pygame.display.set_caption("Sharing Screens")					#Set title
 	DISPLAY.fill(WHITE)												
 	pygame.draw.rect(DISPLAY,SILVER,CLIENTS_SCREEN)									#Screen of online clients
 	myfont = pygame.font.SysFont("Arial", 30)			
@@ -395,12 +395,12 @@ def display_photo():
 	try:
 	
 		#open a file, put the image list that we recieve from the client and present it on the screen.
-		fh = open (r"ShareScreenPic_RoyKuper.jpg","wb")
+		fh = open (r"temp.jpg","wb")
 		fh.write(("".join(EntireImage)))#.decode('base64'))
 		fh.close()
 		
 		#load the image, and present it on screen
-		img = pygame.image.load(r"ShareScreenPic_RoyKuper.jpg")
+		img = pygame.image.load(r"temp.jpg")
 		img =  pygame.transform.scale(img, (SHARE_WINDOW[2], SHARE_WINDOW[3]))
 		DISPLAY.blit(img,(SHARE_WINDOW[0],SHARE_WINDOW[1]))
 		
